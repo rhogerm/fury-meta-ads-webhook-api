@@ -1,4 +1,3 @@
-import sensible from "@fastify/sensible";
 import Fastify, {
   type FastifyInstance,
   type FastifyReply,
@@ -16,8 +15,6 @@ export const buildApp = async (): Promise<FastifyInstance> => {
   const app = Fastify({
     logger: true
   });
-
-  await app.register(sensible);
 
   app.get("/health", () => ({
     status: "ok"
@@ -59,7 +56,9 @@ export const buildApp = async (): Promise<FastifyInstance> => {
       const jobStatus = await getTakedownJobStatus(parsedParams.data.id);
 
       if (!jobStatus) {
-        return reply.notFound("Job not found");
+        return reply.status(404).send({
+          message: "Job not found"
+        });
       }
 
       return reply.send(jobStatus);
