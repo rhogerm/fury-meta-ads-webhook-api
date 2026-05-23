@@ -1,6 +1,6 @@
 # FURY Meta Ads Webhook API
 
-Mini-API em Node.js + TypeScript para simular o fluxo de recebimento de uma violacao de anuncio, validacao do payload, enfileiramento de takedown com BullMQ e processamento assíncrono via worker. ByRhogerM
+Mini-API em Node.js + TypeScript para simular o fluxo de recebimento de uma violacao de anuncio, validacao do payload, enfileiramento de takedown com BullMQ e processamento assíncrono via worker. ByRhogerMiranda
 
 ## Stack
 
