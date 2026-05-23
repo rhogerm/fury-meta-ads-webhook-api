@@ -1,0 +1,45 @@
+{
+  "name": "fury-meta-ads-webhook-api",
+  "version": "1.0.0",
+  "description": "Mini API para processar webhooks de violacao de anuncios e enfileirar takedowns com BullMQ.",
+  "type": "module",
+  "main": "dist/src/server.js",
+  "packageManager": "pnpm@9.15.5",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "dev:worker": "tsx watch src/worker.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/server.js",
+    "worker": "node dist/src/worker.js",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "bullmq",
+    "redis",
+    "zod",
+    "meta-ads"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "bullmq": "^5.51.1",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.5.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.21.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.8"
+  }
+}
