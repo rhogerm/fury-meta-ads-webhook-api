@@ -4,7 +4,6 @@
   "description": "Mini API para processar webhooks de violacao de anuncios e enfileirar takedowns com BullMQ.",
   "type": "module",
   "main": "dist/src/server.js",
-  "packageManager": "pnpm@9.15.5",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "dev:worker": "tsx watch src/worker.ts",

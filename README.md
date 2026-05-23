@@ -29,9 +29,7 @@ Mini-API em Node.js + TypeScript para simular o fluxo de recebimento de uma viol
 Clone o repositorio e instale as dependencias:
 
 ```bash
-corepack enable
-corepack prepare pnpm@9.15.5 --activate
-pnpm install
+npm install
 ```
 
 Suba o Redis:
@@ -49,13 +47,13 @@ cp .env.example .env
 Em um terminal, rode a API:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Em outro terminal, rode o worker:
 
 ```bash
-pnpm dev:worker
+npm run dev:worker
 ```
 
 A API ficara disponivel em:
@@ -138,14 +136,14 @@ META_API_TIMEOUT_MS=1
 ## Scripts
 
 ```bash
-pnpm dev          # API em modo watch
-pnpm dev:worker   # Worker em modo watch
-pnpm build        # Compila TypeScript
-pnpm start        # Executa API compilada
-pnpm worker       # Executa worker compilado
-pnpm typecheck    # Verifica tipos
-pnpm lint         # Executa ESLint
-pnpm test         # Executa testes
+npm run dev          # API em modo watch
+npm run dev:worker   # Worker em modo watch
+npm run build        # Compila TypeScript
+npm run start        # Executa API compilada
+npm run worker       # Executa worker compilado
+npm run typecheck    # Verifica tipos
+npm run lint         # Executa ESLint
+npm run test         # Executa testes
 ```
 
 ## Decisoes tecnicas
